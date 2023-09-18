@@ -1,0 +1,32 @@
+{
+  "env":{
+    "node": true
+  },
+  "extends": ["plugin:@typescript-eslint/recommended", "prettier", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/ban-types": [
+        "error",
+        {
+            "extendDefaults": true,
+            "types": {
+                "{}": false
+            }
+        }
+    ],
+    // Enforce the use of the shorthand syntax.
+    "object-shorthand": "error",
+    "no-undef": 2,
+    "no-unsafe-optional-chaining": 1,
+    "no-console": "warn",
+    "no-eval": "error",
+    "no-unused-vars": "warn",
+    "import/first": "error",
+  }
+}
