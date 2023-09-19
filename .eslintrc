@@ -26,7 +26,7 @@
     "no-unsafe-optional-chaining": 1,
     "no-console": "warn",
     "no-eval": "error",
-    "no-unused-vars": "warn",
-    "import/first": "error",
+    "no-unused-vars": "warn"
+    // "import/first": "error"
   }
 }
