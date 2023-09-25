@@ -1,3 +1,1 @@
-import register from './register'
-
-export { register }
+export { register } from './register'

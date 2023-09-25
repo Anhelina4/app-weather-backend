@@ -1,11 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.random = exports.hashPassword = void 0;
-const hashPassword_1 = __importDefault(require("./hashPassword"));
-exports.hashPassword = hashPassword_1.default;
-const random_1 = __importDefault(require("./random"));
-exports.random = random_1.default;
+var hashPassword_1 = require("./hashPassword");
+Object.defineProperty(exports, "hashPassword", { enumerable: true, get: function () { return hashPassword_1.hashPassword; } });
+var random_1 = require("./random");
+Object.defineProperty(exports, "random", { enumerable: true, get: function () { return random_1.random; } });
 //# sourceMappingURL=index.js.map

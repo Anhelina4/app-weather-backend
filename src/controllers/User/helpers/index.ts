@@ -1,4 +1,2 @@
-import hashPassword from './hashPassword'
-import random from './random'
-
-export { hashPassword, random }
+export { hashPassword } from './hashPassword'
+export { random } from './random'

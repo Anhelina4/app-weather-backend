@@ -1,10 +1,10 @@
+// import http from 'http'
 import { appRouter } from './routes'
 import bodyParser from 'body-parser'
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import express from 'express'
-// import http from 'http'
 import mongoose from 'mongoose'
 const app = express()
 

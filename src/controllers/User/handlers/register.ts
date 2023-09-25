@@ -1,9 +1,9 @@
-import { createUser, getUserByEmail } from 'models/User'
-import { hashPassword, random } from 'controllers/User/helpers'
+import { createUser, getUserByEmail } from '../../../models/User'
+import { hashPassword, random } from '../../../controllers/User/helpers'
 
 import express from 'express'
 
-const register = async (req: express.Request, res: express.Response) => {
+export const register = async (req: express.Request, res: express.Response) => {
   try {
     const { email, name, surname, password, avatar } = req.body
 
@@ -33,5 +33,4 @@ const register = async (req: express.Request, res: express.Response) => {
     res.sendStatus(400)
   }
 }
-
 export default register

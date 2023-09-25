@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.hashPassword = void 0;
 const crypto_1 = __importDefault(require("crypto"));
 const SECRET = 'APP_WEATHER_SECRET_AUTH_KEY';
 const hashPassword = (salt, password) => {
@@ -11,5 +12,5 @@ const hashPassword = (salt, password) => {
         .update(SECRET)
         .digest('hex');
 };
-exports.default = hashPassword;
+exports.hashPassword = hashPassword;
 //# sourceMappingURL=hashPassword.js.map

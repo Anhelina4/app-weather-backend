@@ -1,9 +1,10 @@
-import UserRoutes from './UserRoutes'
+import { UserRoutes } from './UserRoutes'
 import express from 'express'
 const router = express.Router()
 
-const appRouter = (): express.Router => {
+export const appRouter = (): express.Router => {
   UserRoutes(router)
   return router
 }
-export { appRouter }
+
+export default appRouter
