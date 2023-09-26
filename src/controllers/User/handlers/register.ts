@@ -14,7 +14,7 @@ export const register = async (req: express.Request, res: express.Response) => {
     const isUserExists = await getUserByEmail(email)
 
     if (isUserExists) {
-      res.sendStatus(400)
+      return res.sendStatus(400)
     }
 
     const salt = random()
