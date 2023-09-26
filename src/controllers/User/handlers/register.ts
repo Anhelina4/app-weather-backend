@@ -5,7 +5,7 @@ import express from 'express'
 
 export const register = async (req: express.Request, res: express.Response) => {
   try {
-    const { email, name, surname, password, avatar } = req.body
+    const { email, name, surname, password, avatar } = req.body || {}
 
     if (!email || !name || !surname || !password) {
       res.sendStatus(400)
@@ -23,7 +23,7 @@ export const register = async (req: express.Request, res: express.Response) => {
       email,
       name,
       surname,
-      avatar,
+      avatar: avatar || null,
       authentication: { salt, password: hashedPassword },
     })
 
