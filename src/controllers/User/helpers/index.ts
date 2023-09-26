@@ -1,2 +1,2 @@
-export { hashPassword } from './hashPassword'
+export { hash } from './hash'
 export { random } from './random'

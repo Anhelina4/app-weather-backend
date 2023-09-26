@@ -1,5 +1,5 @@
 import { createUser, getUserByEmail } from '../../../models/User'
-import { hashPassword, random } from '../../../controllers/User/helpers'
+import { hash, random } from '../../../controllers/User/helpers'
 
 import express from 'express'
 
@@ -8,7 +8,7 @@ export const register = async (req: express.Request, res: express.Response) => {
     const { email, name, surname, password, avatar } = req.body || {}
 
     if (!email || !name || !surname || !password) {
-      res.sendStatus(400)
+      return res.sendStatus(400)
     }
 
     const isUserExists = await getUserByEmail(email)
@@ -18,7 +18,7 @@ export const register = async (req: express.Request, res: express.Response) => {
     }
 
     const salt = random()
-    const hashedPassword = hashPassword(salt, password)
+    const hashedPassword = hash(salt, password)
     const user = await createUser({
       email,
       name,

@@ -14,7 +14,7 @@ const register = async (req, res) => {
             res.sendStatus(400);
         }
         const salt = (0, helpers_1.random)();
-        const hashedPassword = (0, helpers_1.hashPassword)(salt, password);
+        const hashedPassword = (0, helpers_1.hash)(salt, password);
         const user = await (0, User_1.createUser)({
             email,
             name,
