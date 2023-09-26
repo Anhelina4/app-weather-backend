@@ -1,3 +1,4 @@
+import { COOKIES } from '../../../constants'
 import express from 'express'
 import { getUserByEmail } from '../../../models/User'
 import { hash } from '../helpers'
@@ -33,7 +34,7 @@ export const login = async (req: express.Request, res: express.Response) => {
 
     await user.save()
 
-    res.cookie('WEATHER_AUTH', user.authentication?.sessionToken, {
+    res.cookie(COOKIES.WEATHER_AUTH, user.authentication?.sessionToken, {
       domain: 'localhost',
       path: '/',
     })
