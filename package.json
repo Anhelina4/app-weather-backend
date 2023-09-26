@@ -13,13 +13,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "_moduleAliases": {
-		  "controllers/*":["controllers/*"],
-      "helpers/*":["helpers/*"],
-      "middleware/*":["middleware/*"],
-      "routes/*":["routes/*"],
-      "models/*":["models/*"]
-	},
   "devDependencies": {
     "@types/bcryptjs": "^2.4.4",
     "@types/body-parser": "^1.19.3",
@@ -49,7 +42,6 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "module-alias": "^2.2.3",
     "mongodb": "^6.1.0",
     "mongoose": "^7.5.2"
   }
